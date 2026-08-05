@@ -23,7 +23,7 @@ JOYgle Studio needs one accessible, responsive website where players, partners, 
 
 ## Solution
 
-This project provides a server-rendered React website with focused routes for the studio, product details, support, contact, and legal information.
+This project provides a responsive React website with focused routes for the studio, product details, support, contact, and legal information. The application supports server rendering for its Cloudflare target and static prerendering for GitHub Pages.
 
 ## Key Features
 
@@ -47,7 +47,7 @@ Repository-backed media and email handoff
 
 ## Architecture
 
-TanStack Start handles file-based routing and server rendering. Shared React components provide the site shell, while route modules own page content and metadata. Vite builds the client and Nitro server output for the Cloudflare target.
+TanStack Start handles file-based routing and prerendering. Shared React components provide the site shell, while route modules own page content and metadata. Vite produces a static GitHub Pages artifact under the `/JOYgleStudio/` base path and a Nitro server build for the optional Cloudflare target.
 
 See [Architecture](docs/ARCHITECTURE.md) for the detailed technical structure.
 
@@ -80,7 +80,7 @@ JOYgleStudio/
 
 ## Current Status
 
-The website is in active development. Core routes, responsive navigation, contact validation, production builds, and initial unit tests are working. Store availability displayed on the site remains in testing or review.
+The production website is live on GitHub Pages. Core routes, responsive navigation, contact validation, error states, and both deployment builds are working. Eleven automated utility and component tests currently pass. Store availability displayed on the site remains in testing or review.
 
 ## Getting Started
 
@@ -122,7 +122,7 @@ GitHub Actions runs lint, type checking, unit tests, and a static production bui
 
 ## Roadmap
 
-- Monitor the GitHub Pages deployment and performance
+- Monitor production availability and performance
 - Add a custom domain when available
 - Optimize large image assets
 - Upgrade deprecated visualization dependencies
