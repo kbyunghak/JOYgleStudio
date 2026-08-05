@@ -22,6 +22,16 @@ bun run build
 
 Run the static GitHub Pages build with the repository base path:
 
+PowerShell:
+
+```powershell
+$env:GITHUB_ACTIONS = "true"
+$env:VITE_BASE_PATH = "/JOYgleStudio/"
+bun run build:pages
+```
+
+POSIX shells:
+
 ```bash
 GITHUB_ACTIONS=true VITE_BASE_PATH=/JOYgleStudio/ bun run build:pages
 ```
@@ -30,15 +40,19 @@ The Pages artifact is generated in `dist/client`.
 
 ## GitHub Actions
 
-The `.github/workflows/pages.yml` workflow validates lint, types, and tests before building and deploying the static Pages artifact. It runs for pushes to `main` and can also be started manually.
+The `.github/workflows/pages.yml` workflow validates lint, types, and tests before building and deploying the static Pages artifact. It runs for pushes to `main` and can also be started manually from the [Actions page](https://github.com/kbyunghak/JOYgleStudio/actions/workflows/pages.yml).
 
 ## GitHub Pages
 
-Expected project URL:
+Production URL:
 
 <https://kbyunghak.github.io/JOYgleStudio/>
 
-In the repository settings, select **GitHub Actions** as the Pages publishing source. The workflow adds the `/JOYgleStudio/` base path, prerenders all static routes, creates a client-side `404.html`, and disables Jekyll processing.
+GitHub Pages is enabled with **GitHub Actions** as its publishing source. The workflow adds the `/JOYgleStudio/` base path, prerenders all static routes, creates a client-side `404.html`, and disables Jekyll processing.
+
+## Deployment Verification
+
+After a deployment, confirm that the workflow completed successfully and that the production URL returns HTTP 200. Verify the home page, direct navigation to nested routes, static assets, and the custom 404 fallback.
 
 ## Custom Domain
 
