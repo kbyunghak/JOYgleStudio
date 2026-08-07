@@ -3,16 +3,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — JOYgle Studio" },
+      { title: "Read The Room Privacy Policy — JOYgle Studio" },
       {
         name: "description",
         content:
-          "How JOYgle Studio and the game Read The Room handle data, advertising via Google Mobile Ads, local storage, and your privacy choices.",
+          "How Read The Room handles data, advertising via Google Mobile Ads, local storage, and your privacy choices.",
       },
-      { property: "og:title", content: "Privacy Policy — JOYgle Studio" },
+      { property: "og:title", content: "Read The Room Privacy Policy" },
       {
         property: "og:description",
-        content: "Our privacy practices for the JOYgle Studio website and games.",
+        content: "Privacy practices for the JOYgle Studio game Read The Room.",
       },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary" },
@@ -105,14 +105,14 @@ function PrivacyPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-14">
       <p className="text-xs font-extrabold tracking-widest text-joy-pink">LEGAL</p>
-      <h1 className="mt-3 text-3xl md:text-5xl">Privacy Policy</h1>
+      <h1 className="mt-3 text-3xl md:text-5xl">Read The Room Privacy Policy</h1>
       <p className="mt-3 text-sm text-muted-foreground">Effective date: August 5, 2026</p>
       <p className="mt-4 text-sm text-muted-foreground">
-        This policy covers the JOYgle Studio website and our game Read The Room.
+        This policy applies specifically to the JOYgle Studio game Read The Room.
       </p>
 
       <aside className="mt-6 rounded-2xl border border-primary/20 bg-secondary/60 p-5">
-        <h2 className="text-lg">Product-specific policies</h2>
+        <h2 className="text-lg">Other product policies</h2>
         <p className="mt-2 text-sm text-muted-foreground">
           Looking for the Korean privacy policy for our English learning game?
         </p>

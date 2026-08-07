@@ -2,17 +2,17 @@
 
 All pages share the responsive `SiteHeader`, main content region, and `SiteFooter` defined by the root route.
 
-| Route                     | Page                | Purpose                                                          |
-| ------------------------- | ------------------- | ---------------------------------------------------------------- |
-| `/`                       | Home                | Introduce the studio and featured product                        |
-| `/products`               | Products            | List current JOYgle Studio products                              |
-| `/products/read-the-room` | Read The Room       | Present game features, screenshots, characters, and availability |
-| `/about`                  | About               | Explain the studio mission and values                            |
-| `/support`                | Support             | Provide common questions and contact guidance                    |
-| `/privacy`                | Privacy             | Describe product and website privacy practices                   |
-| `/privacy/word-rescue`    | Word Rescue Privacy | Publish the Korean product-specific privacy policy               |
-| `/contact`                | Contact             | Validate an inquiry and open a pre-filled email                  |
-| unmatched                 | Not Found           | Explain the missing route and return visitors home               |
+| Route                     | Page                  | Purpose                                                          |
+| ------------------------- | --------------------- | ---------------------------------------------------------------- |
+| `/`                       | Home                  | Introduce the studio and featured product                        |
+| `/products`               | Products              | List current JOYgle Studio products                              |
+| `/products/read-the-room` | Read The Room         | Present game features, screenshots, characters, and availability |
+| `/about`                  | About                 | Explain the studio mission and values                            |
+| `/support`                | Support               | Provide common questions and contact guidance                    |
+| `/privacy`                | Read The Room Privacy | Describe Read The Room data and advertising practices            |
+| `/privacy/word-rescue`    | Word Rescue Privacy   | Publish the Korean product-specific privacy policy               |
+| `/contact`                | Contact               | Validate an inquiry and open a pre-filled email                  |
+| unmatched                 | Not Found             | Explain the missing route and return visitors home               |
 
 ## Home
 
@@ -48,7 +48,7 @@ The support page provides frequently asked questions and directs unresolved inqu
 
 ## Privacy
 
-The privacy page describes the current website and product data boundaries. It should be reviewed whenever analytics, backend forms, authentication, or third-party services are added.
+The `/privacy` page is the product-specific privacy policy for Read The Room. It describes optional rewarded advertising, third-party providers, local game data, children's privacy, retention, and contact details.
 
 The product-specific `/privacy/word-rescue` route documents microphone processing, local game storage, children's privacy, user controls, and the support contact for 말해봐! 영단어 구조대. App-store listings should link directly to this stable route.
 
