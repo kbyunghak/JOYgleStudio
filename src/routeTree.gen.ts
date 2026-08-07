@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SupportRouteImport } from './routes/support'
+import { Route as PrivacyWordRescueRouteImport } from './routes/privacy_.word-rescue'
 import { Route as ProductsIndexRouteImport } from './routes/products.index'
 import { Route as ProductsReadTheRoomRouteImport } from './routes/products.read-the-room'
 
@@ -42,6 +43,11 @@ const SupportRoute = SupportRouteImport.update({
   path: '/support',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyWordRescueRoute = PrivacyWordRescueRouteImport.update({
+  id: '/privacy_/word-rescue',
+  path: '/privacy/word-rescue',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProductsIndexRoute = ProductsIndexRouteImport.update({
   id: '/products/',
   path: '/products/',
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/support': typeof SupportRoute
+  '/privacy/word-rescue': typeof PrivacyWordRescueRoute
   '/products/read-the-room': typeof ProductsReadTheRoomRoute
   '/products/': typeof ProductsIndexRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/support': typeof SupportRoute
+  '/privacy/word-rescue': typeof PrivacyWordRescueRoute
   '/products/read-the-room': typeof ProductsReadTheRoomRoute
   '/products': typeof ProductsIndexRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/support': typeof SupportRoute
+  '/privacy_/word-rescue': typeof PrivacyWordRescueRoute
   '/products/read-the-room': typeof ProductsReadTheRoomRoute
   '/products/': typeof ProductsIndexRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/privacy'
     | '/support'
+    | '/privacy/word-rescue'
     | '/products/read-the-room'
     | '/products/'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/privacy'
     | '/support'
+    | '/privacy/word-rescue'
     | '/products/read-the-room'
     | '/products'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/privacy'
     | '/support'
+    | '/privacy_/word-rescue'
     | '/products/read-the-room'
     | '/products/'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PrivacyRoute: typeof PrivacyRoute
   SupportRoute: typeof SupportRoute
+  PrivacyWordRescueRoute: typeof PrivacyWordRescueRoute
   ProductsReadTheRoomRoute: typeof ProductsReadTheRoomRoute
   ProductsIndexRoute: typeof ProductsIndexRoute
 }
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SupportRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy_/word-rescue': {
+      id: '/privacy_/word-rescue'
+      path: '/privacy/word-rescue'
+      fullPath: '/privacy/word-rescue'
+      preLoaderRoute: typeof PrivacyWordRescueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/products/': {
       id: '/products/'
       path: '/products'
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   PrivacyRoute: PrivacyRoute,
   SupportRoute: SupportRoute,
+  PrivacyWordRescueRoute: PrivacyWordRescueRoute,
   ProductsReadTheRoomRoute: ProductsReadTheRoomRoute,
   ProductsIndexRoute: ProductsIndexRoute,
 }

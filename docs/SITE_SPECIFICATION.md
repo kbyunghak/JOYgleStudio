@@ -18,6 +18,7 @@ JOYgleStudio is the official portfolio and product website for JOYgle Studio. It
 - Studio overview and product catalog
 - Read The Room product details, screenshots, and character information
 - Support, privacy, and contact pages
+- A Korean product-specific privacy policy for 말해봐! 영단어 구조대
 - Responsive navigation and reusable site shell
 - Contact-field validation and pre-filled email handoff
 - Metadata, 404 handling, and recoverable application errors

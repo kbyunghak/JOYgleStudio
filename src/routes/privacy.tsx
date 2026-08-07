@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -110,6 +110,19 @@ function PrivacyPage() {
       <p className="mt-4 text-sm text-muted-foreground">
         This policy covers the JOYgle Studio website and our game Read The Room.
       </p>
+
+      <aside className="mt-6 rounded-2xl border border-primary/20 bg-secondary/60 p-5">
+        <h2 className="text-lg">Product-specific policies</h2>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Looking for the Korean privacy policy for our English learning game?
+        </p>
+        <Link
+          to="/privacy/word-rescue"
+          className="mt-3 inline-flex rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground hover:bg-primary/90"
+        >
+          말해봐! 영단어 구조대 개인정보처리방침
+        </Link>
+      </aside>
 
       <div className="mt-8 space-y-6">
         {sections.map((s) => (
