@@ -17,6 +17,10 @@ import { Route as SupportRouteImport } from './routes/support'
 import { Route as PrivacyWordRescueRouteImport } from './routes/privacy_.word-rescue'
 import { Route as ProductsIndexRouteImport } from './routes/products.index'
 import { Route as ProductsReadTheRoomRouteImport } from './routes/products.read-the-room'
+import { Route as PrivacyReadTheRoomEnRouteImport } from './routes/privacy_.read-the-room.en'
+import { Route as PrivacyReadTheRoomKoRouteImport } from './routes/privacy_.read-the-room.ko'
+import { Route as PrivacySpeakfallEnRouteImport } from './routes/privacy_.speakfall.en'
+import { Route as PrivacySpeakfallKoRouteImport } from './routes/privacy_.speakfall.ko'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,6 +62,26 @@ const ProductsReadTheRoomRoute = ProductsReadTheRoomRouteImport.update({
   path: '/products/read-the-room',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyReadTheRoomEnRoute = PrivacyReadTheRoomEnRouteImport.update({
+  id: '/privacy_/read-the-room/en',
+  path: '/privacy/read-the-room/en',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyReadTheRoomKoRoute = PrivacyReadTheRoomKoRouteImport.update({
+  id: '/privacy_/read-the-room/ko',
+  path: '/privacy/read-the-room/ko',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacySpeakfallEnRoute = PrivacySpeakfallEnRouteImport.update({
+  id: '/privacy_/speakfall/en',
+  path: '/privacy/speakfall/en',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacySpeakfallKoRoute = PrivacySpeakfallKoRouteImport.update({
+  id: '/privacy_/speakfall/ko',
+  path: '/privacy/speakfall/ko',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -68,6 +92,10 @@ export interface FileRoutesByFullPath {
   '/privacy/word-rescue': typeof PrivacyWordRescueRoute
   '/products/read-the-room': typeof ProductsReadTheRoomRoute
   '/products/': typeof ProductsIndexRoute
+  '/privacy/read-the-room/en': typeof PrivacyReadTheRoomEnRoute
+  '/privacy/read-the-room/ko': typeof PrivacyReadTheRoomKoRoute
+  '/privacy/speakfall/en': typeof PrivacySpeakfallEnRoute
+  '/privacy/speakfall/ko': typeof PrivacySpeakfallKoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +106,10 @@ export interface FileRoutesByTo {
   '/privacy/word-rescue': typeof PrivacyWordRescueRoute
   '/products/read-the-room': typeof ProductsReadTheRoomRoute
   '/products': typeof ProductsIndexRoute
+  '/privacy/read-the-room/en': typeof PrivacyReadTheRoomEnRoute
+  '/privacy/read-the-room/ko': typeof PrivacyReadTheRoomKoRoute
+  '/privacy/speakfall/en': typeof PrivacySpeakfallEnRoute
+  '/privacy/speakfall/ko': typeof PrivacySpeakfallKoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +121,10 @@ export interface FileRoutesById {
   '/privacy_/word-rescue': typeof PrivacyWordRescueRoute
   '/products/read-the-room': typeof ProductsReadTheRoomRoute
   '/products/': typeof ProductsIndexRoute
+  '/privacy_/read-the-room/en': typeof PrivacyReadTheRoomEnRoute
+  '/privacy_/read-the-room/ko': typeof PrivacyReadTheRoomKoRoute
+  '/privacy_/speakfall/en': typeof PrivacySpeakfallEnRoute
+  '/privacy_/speakfall/ko': typeof PrivacySpeakfallKoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +137,10 @@ export interface FileRouteTypes {
     | '/privacy/word-rescue'
     | '/products/read-the-room'
     | '/products/'
+    | '/privacy/read-the-room/en'
+    | '/privacy/read-the-room/ko'
+    | '/privacy/speakfall/en'
+    | '/privacy/speakfall/ko'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +151,10 @@ export interface FileRouteTypes {
     | '/privacy/word-rescue'
     | '/products/read-the-room'
     | '/products'
+    | '/privacy/read-the-room/en'
+    | '/privacy/read-the-room/ko'
+    | '/privacy/speakfall/en'
+    | '/privacy/speakfall/ko'
   id:
     | '__root__'
     | '/'
@@ -121,6 +165,10 @@ export interface FileRouteTypes {
     | '/privacy_/word-rescue'
     | '/products/read-the-room'
     | '/products/'
+    | '/privacy_/read-the-room/en'
+    | '/privacy_/read-the-room/ko'
+    | '/privacy_/speakfall/en'
+    | '/privacy_/speakfall/ko'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,6 +180,10 @@ export interface RootRouteChildren {
   PrivacyWordRescueRoute: typeof PrivacyWordRescueRoute
   ProductsReadTheRoomRoute: typeof ProductsReadTheRoomRoute
   ProductsIndexRoute: typeof ProductsIndexRoute
+  PrivacyReadTheRoomEnRoute: typeof PrivacyReadTheRoomEnRoute
+  PrivacyReadTheRoomKoRoute: typeof PrivacyReadTheRoomKoRoute
+  PrivacySpeakfallEnRoute: typeof PrivacySpeakfallEnRoute
+  PrivacySpeakfallKoRoute: typeof PrivacySpeakfallKoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -192,6 +244,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsReadTheRoomRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy_/read-the-room/en': {
+      id: '/privacy_/read-the-room/en'
+      path: '/privacy/read-the-room/en'
+      fullPath: '/privacy/read-the-room/en'
+      preLoaderRoute: typeof PrivacyReadTheRoomEnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy_/read-the-room/ko': {
+      id: '/privacy_/read-the-room/ko'
+      path: '/privacy/read-the-room/ko'
+      fullPath: '/privacy/read-the-room/ko'
+      preLoaderRoute: typeof PrivacyReadTheRoomKoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy_/speakfall/en': {
+      id: '/privacy_/speakfall/en'
+      path: '/privacy/speakfall/en'
+      fullPath: '/privacy/speakfall/en'
+      preLoaderRoute: typeof PrivacySpeakfallEnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy_/speakfall/ko': {
+      id: '/privacy_/speakfall/ko'
+      path: '/privacy/speakfall/ko'
+      fullPath: '/privacy/speakfall/ko'
+      preLoaderRoute: typeof PrivacySpeakfallKoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -204,6 +284,10 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyWordRescueRoute: PrivacyWordRescueRoute,
   ProductsReadTheRoomRoute: ProductsReadTheRoomRoute,
   ProductsIndexRoute: ProductsIndexRoute,
+  PrivacyReadTheRoomEnRoute: PrivacyReadTheRoomEnRoute,
+  PrivacyReadTheRoomKoRoute: PrivacyReadTheRoomKoRoute,
+  PrivacySpeakfallEnRoute: PrivacySpeakfallEnRoute,
+  PrivacySpeakfallKoRoute: PrivacySpeakfallKoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
