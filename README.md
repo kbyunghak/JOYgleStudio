@@ -136,4 +136,11 @@ GitHub Actions runs lint, type checking, unit tests, and a static production bui
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+Copyright © 2026 Andrew Kim, doing business as JOYgle Studio. All rights reserved.
+
+This repository and its original source code, website design, branding,
+artwork, documentation, and other original materials may not be reproduced,
+modified, distributed, or used commercially without prior written permission.
+
+Third-party libraries, frameworks, fonts, and other dependencies remain
+subject to their respective licenses.
