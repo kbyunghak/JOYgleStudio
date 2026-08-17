@@ -9,10 +9,10 @@ import amyProfile from "../../assets/Projects/ReadTheRoom/amy_profile.png";
 import kenProfile from "../../assets/Projects/ReadTheRoom/ken_profile.png";
 import soraProfile from "../../assets/Projects/ReadTheRoom/sora_profile.png";
 
-import shotChoiceKo from "../../assets/Projects/ReadTheRoom/1000031295.jpg";
-import shotChoiceEn from "../../assets/Projects/ReadTheRoom/1000031299.jpg";
-import shotFeedback from "../../assets/Projects/ReadTheRoom/1000031301.jpg";
-import shotSummary from "../../assets/Projects/ReadTheRoom/1000031303.jpg";
+import shotChoiceKo from "../../assets/Projects/ReadTheRoom/Play_Ken_ko.jpg";
+import shotChoiceEn from "../../assets/Projects/ReadTheRoom/Play_Ken_en.jpg";
+import shotFeedback from "../../assets/Projects/ReadTheRoom/feedback_en.jpg";
+import shotSummary from "../../assets/Projects/ReadTheRoom/storymap_en.jpg";
 
 export const Route = createFileRoute("/products/read-the-room")({
   head: () => ({
@@ -70,7 +70,7 @@ const shots = [
   { src: shotChoiceKo, alt: "Read The Room choice screen in Korean" },
   { src: shotChoiceEn, alt: "Read The Room choice screen in English" },
   { src: shotFeedback, alt: "Read The Room feedback screen with stat changes and a tip" },
-  { src: shotSummary, alt: "Read The Room chapter summary screen with retry options" },
+  { src: shotSummary, alt: "Read The Room StoryMap screen showing episode cards" },
 ];
 
 function ReadTheRoomPage() {
@@ -120,7 +120,7 @@ function ReadTheRoomPage() {
       <section className="mt-14">
         <h2 className="text-2xl md:text-3xl">Screenshots</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Choice, feedback, and chapter summary screens.
+          Choice, feedback, and StoryMap screens.
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {shots.map((s) => (

@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles } from "lucide-react";
 import icon from "../../assets/Projects/ReadTheRoom/ReadTheRoom.png";
-import shotChoiceEn from "../../assets/Projects/ReadTheRoom/1000031299.jpg";
-import shotFeedback from "../../assets/Projects/ReadTheRoom/1000031301.jpg";
-import shotSummary from "../../assets/Projects/ReadTheRoom/1000031303.jpg";
+import shotChoiceEn from "../../assets/Projects/ReadTheRoom/Play_Ken_en.jpg";
+import shotFeedback from "../../assets/Projects/ReadTheRoom/feedback_en.jpg";
+import shotSummary from "../../assets/Projects/ReadTheRoom/storymap_en.jpg";
 
 export const Route = createFileRoute("/products/")({
   head: () => ({
@@ -41,7 +41,7 @@ const features = [
 const shots = [
   { src: shotChoiceEn, alt: "Read The Room choice screen" },
   { src: shotFeedback, alt: "Read The Room feedback screen" },
-  { src: shotSummary, alt: "Read The Room chapter summary screen" },
+  { src: shotSummary, alt: "Read The Room StoryMap screen" },
 ];
 
 function ProductsPage() {

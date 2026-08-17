@@ -12,9 +12,9 @@ import {
 import mascot from "@/assets/mascot.png";
 import { StoreButtons } from "@/components/store-buttons";
 
-import shotChoice from "../../assets/Projects/ReadTheRoom/1000031279.jpg";
-import shotFeedback from "../../assets/Projects/ReadTheRoom/1000031287.jpg";
-import shotStoryMap from "../../assets/Projects/ReadTheRoom/1000031285.jpg";
+import shotChoice from "../../assets/Projects/ReadTheRoom/Play_Ken_en.jpg";
+import shotFeedback from "../../assets/Projects/ReadTheRoom/feedback_en.jpg";
+import shotStoryMap from "../../assets/Projects/ReadTheRoom/storymap_en.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
