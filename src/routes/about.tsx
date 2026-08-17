@@ -9,12 +9,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "JOYgle Studio is a small studio building playful experiences that help people understand, connect, and grow.",
+          "JOYgle Studio is an independent digital studio creating thoughtful software and playful experiences that make ideas and information easier to understand and explore.",
       },
       { property: "og:title", content: "About — JOYgle Studio" },
       {
         property: "og:description",
-        content: "Our mission, values, and the people behind JOYgle Studio.",
+        content:
+          "Learn about JOYgle Studio, our values, and how we create useful, thoughtful, and playful digital products.",
       },
     ],
   }),
@@ -46,15 +47,17 @@ function AboutPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-14 md:grid-cols-[1.3fr_1fr]">
           <div>
             <p className="text-xs font-extrabold tracking-widest text-joy-pink">ABOUT US</p>
-            <h1 className="mt-3 text-3xl md:text-5xl">
-              A small studio with a big soft spot for people.
-            </h1>
+
+            <h1 className="mt-3 text-3xl md:text-5xl">We make useful things fun.</h1>
+
             <p className="mt-4 max-w-xl text-muted-foreground">
-              JOYgle Studio is an independent digital studio founded by Andrew Kim. We create
-              playful products that help people understand social situations, learn through stories,
-              and connect with others.
+              JOYgle Studio is an independent digital studio that turns ideas and everyday
+              challenges into thoughtful software and playful experiences. We create everything from
+              interactive games that help people learn, communicate, and connect to practical tools
+              that make information easier to understand and explore.
             </p>
           </div>
+
           <img
             src={mascot}
             alt="JOYgle Studio mascot"
@@ -68,6 +71,7 @@ function AboutPage() {
 
       <section className="mx-auto max-w-6xl px-4 py-14">
         <h2 className="text-2xl md:text-3xl">What we care about</h2>
+
         <div className="mt-6 grid gap-5 md:grid-cols-3">
           {values.map(({ icon: Icon, title, body }) => (
             <div
@@ -77,6 +81,7 @@ function AboutPage() {
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary">
                 <Icon className="h-6 w-6" aria-hidden />
               </span>
+
               <h3 className="mt-4 text-lg">{title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{body}</p>
             </div>
@@ -87,11 +92,12 @@ function AboutPage() {
       <section className="bg-cream py-14">
         <div className="mx-auto max-w-3xl px-4 text-center">
           <h2 className="text-2xl md:text-3xl">Our story</h2>
+
           <p className="mt-4 text-muted-foreground">
-            We started JOYgle Studio because we kept noticing the same thing: the hardest part of
-            everyday life isn't solving puzzles, it's reading people. So we build interactive
-            stories where the puzzle is a conversation, and the reward is understanding someone a
-            little better.
+            JOYgle Studio started with a simple idea: useful technology doesn&apos;t have to feel
+            complicated or impersonal. We create digital experiences that are thoughtful,
+            approachable, and a little more joyful—whether they help someone understand a situation,
+            learn something new, or make sense of complex information.
           </p>
         </div>
       </section>
