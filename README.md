@@ -4,6 +4,7 @@ Official website for JOYgle Studio, featuring product information, support resou
 
 [![CI](https://github.com/kbyunghak/JOYgleStudio/actions/workflows/pages.yml/badge.svg)](https://github.com/kbyunghak/JOYgleStudio/actions/workflows/pages.yml)
 [![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-1f6feb)](https://kbyunghak.github.io/JOYgleStudio/)
+[![Website](https://img.shields.io/badge/Website-GitHub%20Pages-1f6feb)](https://joygle-studio.vercel.app/)
 
 ## Overview
 
