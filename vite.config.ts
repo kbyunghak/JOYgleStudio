@@ -7,6 +7,7 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 const basePath = process.env["VITE_BASE_PATH"] ?? "/";
+const isGitHubActions = Boolean(process.env["GITHUB_ACTIONS"]);
 
 export default defineConfig({
   vite: {
@@ -14,13 +15,11 @@ export default defineConfig({
   },
   tanstackStart: {
     prerender: {
-      enabled: true,
+      enabled: isGitHubActions,
       crawlLinks: true,
       failOnError: true,
     },
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
     server: { entry: "server" },
   },
-  nitro: process.env["GITHUB_ACTIONS"] ? false : { preset: "cloudflare-module" },
+  nitro: isGitHubActions ? false : { preset: "cloudflare-module" },
 });
